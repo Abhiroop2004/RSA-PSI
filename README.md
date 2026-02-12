@@ -1,7 +1,4 @@
-# RSA-PSI
-Implementation of Private Set Intersection protocol based on RSA blind signature
-
-# RSA-based Private Set Intersection
+# Blind RSA-based Private Set Intersection Protocol
 
 ## Server side:
 
@@ -43,3 +40,11 @@ After receiving $y'_i$:
 
 Output:
 { $t'_1, \dots, t'_v$ } $\cap$ { $t_1, \dots, t_w$ }
+
+
+## References
+
+1. Freedman, M. J., Nissim, K., & Pinkas, B.  
+   *Efficient Private Matching and Set Intersection.*  
+   IACR ePrint Archive, 2009/491, 2009.  
+   Available at: https://eprint.iacr.org/2009/491.pdf
