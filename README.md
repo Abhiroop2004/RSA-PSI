@@ -19,9 +19,7 @@ Server stores:  $\{ t_1, t_2, \dots, t_w \}$
 Server receives:  $\{ y_1, y_2, \dots, y_v \}$
 
 Compute:
-$$
-y'_i = (y_i)^d \bmod n
-$$
+$y'_i = (y_i)^d \bmod n$
 
 Server sends:  $\{ y'_1, \dots, y'_v \}$ and $\{ t_1, \dots, t_w \}$
 
@@ -42,7 +40,7 @@ Client sends:  $\{ y_1, y_2, \dots, y_v \}$
 
 After receiving $y'_i$:
 - $K_{c_i} = y'_i \cdot R_i^{-1} \bmod n$
-- $t'_i = H'(K_{c_i})$
+- ${t_{i}^{,}}$ = $H'(K_{c_i} )$
 
 Output:
 { $t'_1, \dots, t'_v$ } $\cap$ { $t_1, \dots, t_w$ }
