@@ -23,7 +23,6 @@ $y'_i = (y_i)^d \bmod n$
 
 Server sends:  $\{ y'_1, \dots, y'_v \}$ and $\{ t_1, \dots, t_w \}$
 
----
 
 ## Client side:
 
