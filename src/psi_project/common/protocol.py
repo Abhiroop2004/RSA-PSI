@@ -1,6 +1,5 @@
 import secrets, math
 from . import algebra
-from _blake2 import blake2b
 import hashlib
 
 
