@@ -1,6 +1,56 @@
 # Blind RSA-based Private Set Intersection Protocol
 
-## Server side:
+![alt text](image-1.png)
+Source: [1]
+### Project Structure:
+```
+RSA-PSI/
+├── .gitignore
+├── README.md
+├── pyproject.toml
+└── src/
+    ├── keys/
+    │   ├── client_keys.json
+    │   └── server_keys.json
+    └── psi_project/
+        ├── bin/
+        │   ├── client.py
+        │   ├── server.py
+        │   └── __init__.py
+        ├── common/
+        │   ├── algebra.py
+        │   ├── protocol.py
+        │   └── __init__.py
+        ├── tools/
+        │   ├── keygen.py
+        │   └── __init__.py
+```
+
+### Quick Start:
+
+1. Clone the Repository
+```bash
+git clone https://github.com/Abhiroop2004/RSA-PSI.git
+cd RSA-PSI
+```
+2. Generate RSA keys
+```bash
+py -m psi_project.tools.keygen
+```
+3. Start the Server
+```bash
+py -m psi_project.bin.server
+```
+follow the prompt to enter server set values
+
+4. Start the Client
+```bash
+py -m psi_project.bin.client
+```
+Enter client set values when prompted
+
+### Mathematical Workflow
+#### Server side:
 
 Let  $S = \{ s_1, s_2, \dots, s_w \}$
 
@@ -21,7 +71,7 @@ $y'_i = (y_i)^d \bmod n$
 Server sends:  $\{ y'_1, \dots, y'_v \}$ and $\{ t_1, \dots, t_w \}$
 
 
-## Client side:
+#### Client side:
 
 Let  $C = \{ c_1, c_2, \dots, c_v \}$
 
@@ -42,7 +92,8 @@ Output:
 { $t'_1, \dots, t'_v$ } $\cap$ { $t_1, \dots, t_w$ }
 
 
-## References
+
+### References
 
 1. Freedman, M. J., Nissim, K., & Pinkas, B.  
    *Efficient Private Matching and Set Intersection.*  
